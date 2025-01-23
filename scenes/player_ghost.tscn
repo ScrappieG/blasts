@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://dpuraxxsnxat"]
+
+[ext_resource type="Script" path="res://scripts/player_ghost.gd" id="1_40ygr"]
+[ext_resource type="Texture2D" uid="uid://cr8wo387yv6g8" path="res://assets/character-ghost.png" id="1_oo1sx"]
+[ext_resource type="PackedScene" uid="uid://c73mraq5ur1l5" path="res://scenes/arrow.tscn" id="3_4qrg5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu2po"]
+atlas = ExtResource("1_oo1sx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq35y"]
+atlas = ExtResource("1_oo1sx")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnttp"]
+atlas = ExtResource("1_oo1sx")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cb2i"]
+atlas = ExtResource("1_oo1sx")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h04wb"]
+atlas = ExtResource("1_oo1sx")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5pve4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu2po")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vq35y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnttp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cb2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h04wb")
+}],
+"loop": true,
+"name": &"left",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ubx0"]
+radius = 19.0
+height = 48.0
+
+[node name="Player-Ghost" type="CharacterBody2D"]
+script = ExtResource("1_40ygr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5pve4")
+animation = &"left"
+autoplay = "left"
+frame_progress = 0.953764
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 3)
+shape = SubResource("CapsuleShape2D_4ubx0")
+
+[node name="arrow" parent="." instance=ExtResource("3_4qrg5")]
+position = Vector2(27, -20)
