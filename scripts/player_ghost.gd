@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
-const CIRCLE_RADIUS = 40.0 #distance of cursor from character
-const INNER_RADIUS = 50.0 
+const SPEED = 150.0
+const CIRCLE_RADIUS = 20.0 #distance of cursor from character
+const INNER_RADIUS = 25.0 
 
 func _physics_process(_delta: float) -> void:
 	velocity = Vector2.ZERO #set velocity to zero at start of frame
