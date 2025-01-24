@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dpuraxxsnxat"]
+[gd_scene load_steps=12 format=3 uid="uid://dpuraxxsnxat"]
 
 [ext_resource type="Script" path="res://scripts/player_ghost.gd" id="1_40ygr"]
 [ext_resource type="Texture2D" uid="uid://cr8wo387yv6g8" path="res://assets/character-ghost.png" id="1_oo1sx"]
 [ext_resource type="PackedScene" uid="uid://c73mraq5ur1l5" path="res://scenes/arrow.tscn" id="3_4qrg5"]
+[ext_resource type="Texture2D" uid="uid://dj8opd14rvdiv" path="res://assets/sprites/character-ghost.png" id="3_co8k7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eu2po"]
 atlas = ExtResource("1_oo1sx")
@@ -41,6 +42,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h04wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_co8k7")
 }],
 "loop": true,
 "name": &"left",
@@ -58,7 +62,6 @@ script = ExtResource("1_40ygr")
 sprite_frames = SubResource("SpriteFrames_5pve4")
 animation = &"left"
 autoplay = "left"
-frame_progress = 0.953764
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 3)
