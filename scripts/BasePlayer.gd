@@ -5,6 +5,7 @@ class_name BasePlayer
 @export var speed: int = 150
 @export var circle_radius: float = 20
 @export var inner_radius: float = 25.0
+@export var health: float = 100.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var arrow: Node2D = $arrow
@@ -47,6 +48,13 @@ func update_animation() -> void:
 			animated_sprite.animation = "run_right"
 			animated_sprite.scale.x = -1
 
+func take_damage(amount: int) -> void:
+	health -= amount
+	if health <= 0:
+		die()
+
+func die() -> void:
+	queue_free() # deletes the node from the scene
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

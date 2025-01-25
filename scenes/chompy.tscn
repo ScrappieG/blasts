@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://bcwg8e1hbyd45"]
 
 [ext_resource type="Script" path="res://scripts/chompy.gd" id="1_jht05"]
-[ext_resource type="Texture2D" uid="uid://bh82rkcis7fq3" path="res://assets/sprites/mobs/big_demon_idle_anim_f0.png" id="2_ks52k"]
-[ext_resource type="Texture2D" uid="uid://dej03sjtl4311" path="res://assets/sprites/mobs/big_demon_idle_anim_f1.png" id="3_kw8w8"]
-[ext_resource type="Texture2D" uid="uid://dfxo3qrvskggv" path="res://assets/sprites/mobs/big_demon_idle_anim_f2.png" id="4_em6oa"]
-[ext_resource type="Texture2D" uid="uid://c2viktfb8ioyc" path="res://assets/sprites/mobs/big_demon_idle_anim_f3.png" id="5_hlk3b"]
-[ext_resource type="Texture2D" uid="uid://nash5jihbk3e" path="res://assets/sprites/mobs/big_demon_run_anim_f0.png" id="6_qvdoy"]
-[ext_resource type="Texture2D" uid="uid://dsi4nur0nwqce" path="res://assets/sprites/mobs/big_demon_run_anim_f1.png" id="7_oasqe"]
-[ext_resource type="Texture2D" uid="uid://bos77dnllcllr" path="res://assets/sprites/mobs/big_demon_run_anim_f2.png" id="8_vpsys"]
-[ext_resource type="Texture2D" uid="uid://cxhlnqwr70180" path="res://assets/sprites/mobs/big_demon_run_anim_f3.png" id="9_ktsp7"]
+[ext_resource type="Texture2D" uid="uid://bh82rkcis7fq3" path="res://assets/sprites/mobs/chompy/big_demon_idle_anim_f0.png" id="2_ks52k"]
+[ext_resource type="Texture2D" uid="uid://dej03sjtl4311" path="res://assets/sprites/mobs/chompy/big_demon_idle_anim_f1.png" id="3_kw8w8"]
+[ext_resource type="Texture2D" uid="uid://dfxo3qrvskggv" path="res://assets/sprites/mobs/chompy/big_demon_idle_anim_f2.png" id="4_em6oa"]
+[ext_resource type="Texture2D" uid="uid://c2viktfb8ioyc" path="res://assets/sprites/mobs/chompy/big_demon_idle_anim_f3.png" id="5_hlk3b"]
+[ext_resource type="Texture2D" uid="uid://nash5jihbk3e" path="res://assets/sprites/mobs/chompy/big_demon_run_anim_f0.png" id="6_qvdoy"]
+[ext_resource type="Texture2D" uid="uid://dsi4nur0nwqce" path="res://assets/sprites/mobs/chompy/big_demon_run_anim_f1.png" id="7_oasqe"]
+[ext_resource type="Texture2D" uid="uid://bos77dnllcllr" path="res://assets/sprites/mobs/chompy/big_demon_run_anim_f2.png" id="8_vpsys"]
+[ext_resource type="Texture2D" uid="uid://cxhlnqwr70180" path="res://assets/sprites/mobs/chompy/big_demon_run_anim_f3.png" id="9_ktsp7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tp15e"]
 animations = [{

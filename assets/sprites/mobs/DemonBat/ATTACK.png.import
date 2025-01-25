@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dej03sjtl4311"
-path="res://.godot/imported/big_demon_idle_anim_f1.png-86ab0277aa8ab23f5baba6b336dc4b33.ctex"
+uid="uid://ds7poe48m4skr"
+path="res://.godot/imported/ATTACK.png-added52bd79bb7d765b33c65e59c0b27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mobs/big_demon_idle_anim_f1.png"
-dest_files=["res://.godot/imported/big_demon_idle_anim_f1.png-86ab0277aa8ab23f5baba6b336dc4b33.ctex"]
+source_file="res://assets/sprites/mobs/DemonBat/ATTACK.png"
+dest_files=["res://.godot/imported/ATTACK.png-added52bd79bb7d765b33c65e59c0b27.ctex"]
 
 [params]
 

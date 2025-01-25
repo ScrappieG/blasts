@@ -4,6 +4,7 @@ class_name BaseMob
 @export var speed: int = 75 #move speed
 @export var health: int = 100 #health
 @export var agro_radius: float = 50.0
+var pos = global_position 
 
 
 
@@ -37,23 +38,5 @@ func take_damage(amount: int) -> void:
 func die() -> void:
 	queue_free() # deletes the node from the scene
 	
-	
-		
-func update_animation(animated_sprite: AnimatedSprite2D, player_position: Vector2) -> void:
-	if !(is_aggro(player_position)):
-		if animated_sprite.animation != "idle":
-			animated_sprite.animation = "idle"
-		return
-		
-	if (global_position.x - player_position.x) < 0:
-		if animated_sprite.animation != "run_right" or animated_sprite.scale.x != 1:
-			animated_sprite.animation = "run_right"
-			animated_sprite.scale.x = 1
-			print("running right")
-	elif (global_position.x - player_position.x) >= 0:
-		if animated_sprite.animation != "run_right" or animated_sprite.scale.x != -1:
-			animated_sprite.animation = "run_right"
-			animated_sprite.scale.x = -1
-			print("running left")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

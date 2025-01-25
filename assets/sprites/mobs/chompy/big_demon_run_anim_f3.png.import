@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bos77dnllcllr"
-path="res://.godot/imported/big_demon_run_anim_f2.png-45f467171a888dbba247ec4a74686e8f.ctex"
+uid="uid://cxhlnqwr70180"
+path="res://.godot/imported/big_demon_run_anim_f3.png-6934a35c60088e79b0130469264763a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mobs/big_demon_run_anim_f2.png"
-dest_files=["res://.godot/imported/big_demon_run_anim_f2.png-45f467171a888dbba247ec4a74686e8f.ctex"]
+source_file="res://assets/sprites/mobs/chompy/big_demon_run_anim_f3.png"
+dest_files=["res://.godot/imported/big_demon_run_anim_f3.png-6934a35c60088e79b0130469264763a5.ctex"]
 
 [params]
 

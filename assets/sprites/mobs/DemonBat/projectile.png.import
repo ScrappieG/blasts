@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh82rkcis7fq3"
-path="res://.godot/imported/big_demon_idle_anim_f0.png-3da9f0876c5049184beb1e08333711eb.ctex"
+uid="uid://eb7wc3ylc3c8"
+path="res://.godot/imported/projectile.png-125e8318b5b05b3036213f40c3dc27ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mobs/big_demon_idle_anim_f0.png"
-dest_files=["res://.godot/imported/big_demon_idle_anim_f0.png-3da9f0876c5049184beb1e08333711eb.ctex"]
+source_file="res://assets/sprites/mobs/DemonBat/projectile.png"
+dest_files=["res://.godot/imported/projectile.png-125e8318b5b05b3036213f40c3dc27ab.ctex"]
 
 [params]
 

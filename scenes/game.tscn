@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://0wuagpwf3234"]
+[gd_scene load_steps=5 format=3 uid="uid://0wuagpwf3234"]
 
 [ext_resource type="PackedScene" uid="uid://dpuraxxsnxat" path="res://scenes/player_ghost.tscn" id="1_pewkm"]
 [ext_resource type="PackedScene" uid="uid://bcwg8e1hbyd45" path="res://scenes/chompy.tscn" id="2_j6140"]
+[ext_resource type="PackedScene" uid="uid://bgam7lgskiwb5" path="res://scenes/demon_bat.tscn" id="3_oy8pu"]
+[ext_resource type="PackedScene" uid="uid://ddtjb0j1pur00" path="res://scenes/demon_bat_projectile.tscn" id="4_g0mte"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(-44, -66)
@@ -14,4 +16,11 @@ position = Vector2(44, 64)
 zoom = Vector2(2, 2)
 
 [node name="Chompy" parent="." instance=ExtResource("2_j6140")]
-position = Vector2(223, 62)
+position = Vector2(-231, 49)
+speed = 50
+
+[node name="DemonBat" parent="." instance=ExtResource("3_oy8pu")]
+position = Vector2(283, -16)
+projectile_scene = ExtResource("4_g0mte")
+speed = 50
+agro_radius = 150.0

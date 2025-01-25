@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddtjb0j1pur00"]
+
+[ext_resource type="Texture2D" uid="uid://eb7wc3ylc3c8" path="res://assets/sprites/mobs/DemonBat/projectile.png" id="1_csm24"]
+[ext_resource type="Script" path="res://scripts/DemonBatProjectile.gd" id="2_f2hwf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s25yd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_csm24")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ysm14"]
+
+[node name="DemonBatProjectile" type="CharacterBody2D"]
+script = ExtResource("2_f2hwf")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_s25yd")
+autoplay = "default"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ysm14")
