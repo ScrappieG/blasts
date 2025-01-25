@@ -1,12 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://0wuagpwf3234"]
+[gd_scene load_steps=3 format=3 uid="uid://0wuagpwf3234"]
 
 [ext_resource type="PackedScene" uid="uid://dpuraxxsnxat" path="res://scenes/player_ghost.tscn" id="1_pewkm"]
+[ext_resource type="PackedScene" uid="uid://bcwg8e1hbyd45" path="res://scenes/chompy.tscn" id="2_j6140"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(-44, -66)
 
-[node name="Player-Ghost" parent="." instance=ExtResource("1_pewkm")]
+[node name="Player" parent="." instance=ExtResource("1_pewkm")]
 position = Vector2(46, 65)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(44, 64)
+zoom = Vector2(2, 2)
+
+[node name="Chompy" parent="." instance=ExtResource("2_j6140")]
+position = Vector2(223, 62)

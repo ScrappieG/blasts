@@ -1,0 +1,67 @@
+[gd_scene load_steps=12 format=3 uid="uid://bcwg8e1hbyd45"]
+
+[ext_resource type="Script" path="res://scripts/chompy.gd" id="1_jht05"]
+[ext_resource type="Texture2D" uid="uid://bh82rkcis7fq3" path="res://assets/0x72_DungeonTilesetII_v1.7/frames/big_demon_idle_anim_f0.png" id="2_ks52k"]
+[ext_resource type="Texture2D" uid="uid://dej03sjtl4311" path="res://assets/0x72_DungeonTilesetII_v1.7/frames/big_demon_idle_anim_f1.png" id="3_kw8w8"]
+[ext_resource type="Texture2D" uid="uid://dfxo3qrvskggv" path="res://assets/0x72_DungeonTilesetII_v1.7/frames/big_demon_idle_anim_f2.png" id="4_em6oa"]
+[ext_resource type="Texture2D" uid="uid://c2viktfb8ioyc" path="res://assets/0x72_DungeonTilesetII_v1.7/frames/big_demon_idle_anim_f3.png" id="5_hlk3b"]
+[ext_resource type="Texture2D" uid="uid://nash5jihbk3e" path="res://assets/0x72_DungeonTilesetII_v1.7/frames/big_demon_run_anim_f0.png" id="6_qvdoy"]
+[ext_resource type="Texture2D" uid="uid://dsi4nur0nwqce" path="res://assets/0x72_DungeonTilesetII_v1.7/frames/big_demon_run_anim_f1.png" id="7_oasqe"]
+[ext_resource type="Texture2D" uid="uid://bos77dnllcllr" path="res://assets/0x72_DungeonTilesetII_v1.7/frames/big_demon_run_anim_f2.png" id="8_vpsys"]
+[ext_resource type="Texture2D" uid="uid://cxhlnqwr70180" path="res://assets/0x72_DungeonTilesetII_v1.7/frames/big_demon_run_anim_f3.png" id="9_ktsp7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tp15e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ks52k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kw8w8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_em6oa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hlk3b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_qvdoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oasqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vpsys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ktsp7")
+}],
+"loop": true,
+"name": &"run_right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yp4hl"]
+radius = 7.0
+height = 25.3571
+
+[node name="Chompy" type="CharacterBody2D"]
+script = ExtResource("1_jht05")
+agro_radius = 150.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tp15e")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.134536
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+scale = Vector2(1, -0.788732)
+shape = SubResource("CapsuleShape2D_yp4hl")
