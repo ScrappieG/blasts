@@ -1,26 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://0wuagpwf3234"]
+[gd_scene load_steps=8 format=3 uid="uid://0wuagpwf3234"]
 
+[ext_resource type="PackedScene" uid="uid://m21v53hysoef" path="res://scenes/levels/room2.tscn" id="1_axc1w"]
 [ext_resource type="PackedScene" uid="uid://dpuraxxsnxat" path="res://scenes/player_ghost.tscn" id="1_pewkm"]
+[ext_resource type="PackedScene" uid="uid://dwwxsfqvg6gyc" path="res://scenes/weapons/shotgun_1.tscn" id="2_8vd0q"]
 [ext_resource type="PackedScene" uid="uid://bcwg8e1hbyd45" path="res://scenes/chompy.tscn" id="2_j6140"]
+[ext_resource type="PackedScene" uid="uid://nkg41lp5ax64" path="res://scenes/weapons/projectiles/shotgun_bullet.tscn" id="3_7wn7e"]
 [ext_resource type="PackedScene" uid="uid://bgam7lgskiwb5" path="res://scenes/demon_bat.tscn" id="3_oy8pu"]
 [ext_resource type="PackedScene" uid="uid://ddtjb0j1pur00" path="res://scenes/demon_bat_projectile.tscn" id="4_g0mte"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(-44, -66)
 
-[node name="Player" parent="." instance=ExtResource("1_pewkm")]
-position = Vector2(46, 65)
+[node name="Starting room" parent="." instance=ExtResource("1_axc1w")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(44, 64)
-zoom = Vector2(2, 2)
+[node name="shotgun1" parent="." instance=ExtResource("2_8vd0q")]
+position = Vector2(119, 178)
+scale = Vector2(0.5, 0.5)
+projectile_scene = ExtResource("3_7wn7e")
+kick_back = 15.0
+
+[node name="Camera2D" type="Camera2D" parent="shotgun1"]
+position = Vector2(2, 0)
+zoom = Vector2(4, 4)
+
+[node name="Player" parent="." instance=ExtResource("1_pewkm")]
+visible = false
+position = Vector2(-4, -12)
 
 [node name="Chompy" parent="." instance=ExtResource("2_j6140")]
-position = Vector2(-231, 49)
+position = Vector2(-339, 32)
 speed = 50
 
 [node name="DemonBat" parent="." instance=ExtResource("3_oy8pu")]
-position = Vector2(283, -16)
+position = Vector2(450, -66)
 projectile_scene = ExtResource("4_g0mte")
 speed = 50
-agro_radius = 150.0
+agro_radius = 250.0

@@ -3,17 +3,19 @@ class_name BasePlayer
 
 #Allows us to change these variables in the inspector (menu on right)
 @export var speed: int = 150
-@export var circle_radius: float = 20
-@export var inner_radius: float = 25.0
+@export var circle_radius: float = 12
+@export var inner_radius: float = 17.0
 @export var health: float = 100.0
+
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var arrow: Node2D = $arrow
 
 # Called when the node enters the scene tree for the first time.
 func _physics_process(_delta: float) -> void:
+	var mouse_position = get_global_mouse_position()
 	velocity = handle_movement()
-	update_arrow()
+	update_arrow(mouse_position)
 	move_and_slide()
 
 #throw away function to be overwritten in derived class
@@ -22,8 +24,7 @@ func handle_movement() -> Vector2:
 	return velocity
 
 # Update the arrow logic (if used)
-func update_arrow() -> void:
-	var mouse_position = get_global_mouse_position()
+func update_arrow(mouse_position: Vector2) -> void:
 	if mouse_position == null:
 		mouse_position = Vector2.ZERO
 	var distance_to_mouse = global_position.distance_to(mouse_position)
@@ -36,17 +37,7 @@ func update_arrow() -> void:
 
 # Manage animations
 func update_animation() -> void:
-	if velocity == Vector2.ZERO:
-		if animated_sprite.animation != "idle":
-			animated_sprite.animation = "idle"
-			animated_sprite.scale.x = 1
-	else:
-		if velocity.x > 0:
-			animated_sprite.animation = "run_right"
-			animated_sprite.scale.x = 1
-		elif velocity.x < 0:
-			animated_sprite.animation = "run_right"
-			animated_sprite.scale.x = -1
+	pass
 
 func take_damage(amount: int) -> void:
 	health -= amount

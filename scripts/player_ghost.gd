@@ -22,3 +22,16 @@ func handle_movement() -> Vector2:
 		velocity = velocity.normalized() * speed
 	update_animation()
 	return velocity
+
+func update_animation() -> void:
+	if velocity == Vector2.ZERO:
+		if animated_sprite.animation != "idle":
+			animated_sprite.animation = "idle"
+			animated_sprite.scale.x = 1
+	else:
+		if velocity.x > 0:
+			animated_sprite.animation = "run_right"
+			animated_sprite.scale.x = 1
+		elif velocity.x < 0:
+			animated_sprite.animation = "run_right"
+			animated_sprite.scale.x = -1
